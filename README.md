@@ -8,8 +8,8 @@ https://midterm-project-d1014.firebaseapp.com
 
 ### Preview
 <div style="display: inline-block">
-  <img src="https://i.imgur.com/8VvR77b.jpg" height="360">
-  <img src="https://i.imgur.com/h7e9nwq.jpg" height="360">
+  <img src="https://i.imgur.com/8VvR77b.jpg" width="800">
+  <img src="https://i.imgur.com/BwDN67C.jpg" width="800">
 </div>
 
 ### Functions
