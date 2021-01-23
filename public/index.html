@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chatroom</title>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
+    
+    <script src="./js/config.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+  </head>
+  <body style="margin: 0px; background-color: #f5f5f5;" id="body">
+    <nav class="navbar navbar-default navbar-static-top">
+      <div class="container-fluid" id="menu">
+        <div class="navbar-header" style="display:flex; flex-direction: row;">
+            <input type="image" src="./assets/home.svg"  height="30" width="30" onclick="homepage()">
+        </div>
+        <div id="toolbar" style="display: none;">
+          <div id="innertoolbar">
+            <input id="inputUser" class="form-control" placeholder="Search email/group..." style="margin-right: 1px;">
+            <button class="btn btn-secondary" id="searchBtn" style="margin-right: 5px;">Chat</button>
+            <button class="btn btn-dark" id="addGroupBtn">Add&nbsp;Group</button>
+          </div>
+        </div>
+        <div class="nav navbar-nav active">
+          <a id="loginout" href="./signin.html">Sign in</a>
+        </div>
+      </div>
+    </nav>
+    <div class="jumbotron" style="background-image: url('./assets/index.jpg');" id="jumbotron">
+      <div id="userInfo">
+        <h1 id="info1"></h1>
+      </div>
+      <div id="permiumInfo">
+        <!-- <h2 id="info2">Get Premium $1.99/month.</h2> -->
+      </div>
+      <div id="profileBtn">
+      </div>
+      <div class="row">
+        <div style="max-width: 400px; height: 120px;" class="col-md-12 col-xl-6" id="paragraph1">
+          <p style="word-break: break-all;">This is a website that allows people to communicate with each other via texts. What's more, you can register now for <u>free</u>!</p>
+        </div>
+        <div style="max-width: 400px; height: 120px;" class="col-md-12 col-xl-6" id="paragraph2">
+          <p style="word-break: break-all;">Our team developed this website for people who cannot talk with others directly. Now you can sit on your couch, and share your ideas in front of your screen!</p>
+        </div>
+      </div>
+    </div>
+    <p style="text-align: center;">Software Studio Midterm Project<br>Copyright ©Zheng-Yen Tsai 2019</p>
+    <div style="position: absolute; right: 0px; display: flex;">
+      <p style="margin-right: 10px;">Contact us:</p>
+      <input style="margin-right: 5px;" type="image" src="./assets/instagram.svg"  height="30" width="30" onclick="developerIgPage()">
+      <input type="image" src="./assets/facebook.svg"  height="30" width="30" onclick="developerFbPage()">
+    </div>
+    <!-- <button onclick="sendNotification()">sendNotification</button> -->
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+.jumbotron {
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    color: white;
+}
+#info1 {
+    animation: slide 1.5s;
+    position: absolute;
+    top: 140px;
+    left: 30px;
+}
+#info2 {
+    animation: slide 2s;
+    position: absolute;
+    top: 230px;
+    left: 30px;
+}
+#btn1 {
+    animation: slide 2.5s;
+    position: absolute;
+    top: 280px;
+    left: 30px;
+}
+#paragraph1 {
+    animation: fadein 2.5s;
+    animation-timing-function: ease-in;
+    top: 230px;
+}
+#paragraph2 {
+    animation: fadein 3.5s;
+    animation-timing-function: ease-in;
+    top: 230px;
+}
+@keyframes slide {
+    from {left: -80px; opacity: 0;}
+    to {left: 30px; opacity: 1;}
+}
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes slide2 {
+    from {left: -80px; opacity: 0;}
+    to {left: 0px; opacity: 0.9;}
+}
+@media (max-width: 660px) and (min-width: 401px) {
+    #info1 {
+        font-size: 24px;
+    }
+    #info2 {
+        font-size: 20px;
+    }
+}
+@media (max-width: 400px) {
+    #info1 {
+        font-size: 18px;
+    }
+    #info2 {
+        font-size: 14px;
+    }
+    #paragraph2 {
+        font-size: 0px;
+    }
+}
+@media (max-width: 576px) {
+    #paragraph1 {
+        top: 260px;
+    }
+}
+@media (min-width: 551px) {
+    #innertoolbar {
+        display: flex;
+    }
+}
+@media (min-width: 551px) {
+    #menu {
+        height: 54px;
+    }
+}
+@media (max-width: 550px) {
+    #menu {
+        height: 80px;
+    }
+    #innertoolbar {
+        display: initial;
+    }
+}
+@media (max-width: 360px) {
+    #loginout {
+        position: absolute;
+        right: 10px;
+        top: 55px;
+    }
+}
+@media (min-width: 501px) {
+    #messagebox {
+        width: 500px;
+    }
+}
+@media (max-width: 500px) {
+    #messagebox {
+        width: 100%;
+    }
+}
+#loginout {
+    border: 0.5px solid;
+    border-radius: 5px;
+}
+.targetMessage{ 
+    word-wrap: break-word;
+    margin-left: 2px;
+    margin-top: 2px;
+    margin-bottom: 0px;
+    color: darkslategray;
+}
+.targetMessageDate {
+    margin-bottom: 0px;
+    margin-top: 5px;
+    font-size:12px;
+    color: darkslategray;
+}

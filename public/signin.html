@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Signin Page</title>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
+    
+    <script src="./js/config.js"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="css/signin.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/signin.css">
+  </head>
+  <body>
+      <div id="custom-alert">
+      </div>
+    　<div id="borderDiv" style="width:440px; height:500px; border:1px solid #dddddd; border-radius: 8px; margin-right: 15px; text-align: center;">
+        <div style="width:75%; display:inline-block;">
+          <img src="./assets/home.svg" height="30" width="30" style="margin-top: 50px; margin-bottom: 20px; cursor: pointer;" onclick="homepage()">
+          <h1 class="h3 mb-3 font-weight-normal">Sign in</h1>
+          <p style="margin-bottom: 20px;">with your email address</p>
+          <div id="signinDiv">
+            <!-- <label for="inputEmail" class="sr-only">Email address</label> -->
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <!-- <label for="inputPassword" class="sr-only">Password</label> -->
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+            <a href="#" onclick="showSecurityDiv()">Forgot password?</a>
+            <div style="height: 20px;"></div>
+            <button class="btn btn-lg btn-primary btn-block" id="btnLogin">Sign in</button>
+            <button class="btn btn-lg btn-info btn-block" id="btngoogle">Sign in with Google</button>
+            <button class="btn btn-lg btn-secondary btn-block" id="btnSignUp">New account</button>
+          </div>
+          <div id="securityDiv" style="display: none;">
+            <input type="email" id="forgotEmail" class="form-control" placeholder="Email address" required autofocus>
+            <button class="btn btn-lg btn-primary btn-block" style="margin-top: 10px;" id="btnNext">Send a reset password email</button>
+            <!-- <p style="margin-top: 20px; margin-bottom: 5px;">Your security question</p>
+            <input id="securityQuestion" class="form-control" placeholder="Your question" readonly>
+            <input id="securityAnswer" class="form-control" placeholder="Your answer" required> -->
+          </div>
+        </div>
+      </div>
+
+    <script src="./js/signin.js"></script>
+  </body>
+</html>
